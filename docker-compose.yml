@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo_database
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Mongo2023!
+    volumes:
+     - ${PWD}/.data/mongodb/data:/data/db
+    ports:
+      - 27017:27017
